@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Claudio Dental Lab",
-    author: "Joseph Claudio",
-    description: "Claudio Dental Lab business site: Dentures, Partials, Crowns, Bridges"
+    title: 'Implosion',
+    author: 'Joseph Claudio',
+    description: 'A SITE ABOUT ALL THE THINGS I LOVE!',
   },
   pathPrefix: '/',
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          "gatsby-remark-copy-linked-files",
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },
@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-115469301-1",
+        trackingId: 'XXXX',
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -43,7 +43,7 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
       },
     },
   ],
