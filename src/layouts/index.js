@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import Link from 'gatsby-link'
 
 class Template extends React.Component {
   constructor(props) {
@@ -26,11 +25,7 @@ class Template extends React.Component {
       this.setState({ loading: '' })
     }, 100)
     document.addEventListener('keyup', e => {
-      if (
-        e.keyCode === 27 &&
-        this.state.isArticleVisible === true &&
-        location.pathname === `/`
-      ) {
+      if (e.keyCode === 27 && this.state.isArticleVisible === true) {
         this.handleCloseArticle()
       }
     })
@@ -103,82 +98,101 @@ class Template extends React.Component {
             article={this.state.article}
             onCloseArticle={this.handleCloseArticle}
             onOpenArticle={this.handleOpenArticle}
-            /* IF USING BACKGROUND IMAGE WITH GATSBY-IMAGE */
             /*background*/
             //background={this.props.data.background}
-            /*Games*/
-            imageWoW={this.props.data.imageWoW}
-            imageBDO={this.props.data.imageBDO}
-            imagePoE={this.props.data.imagePoE}
-            imageBless={this.props.data.imageBless}
-            /*Anime*/
-            imageDBZ={this.props.data.imageDBZ}
-            imageBleach={this.props.data.imageBleach}
-            imageGundamWing={this.props.data.imageGundamWing}
-            imageBNHA={this.props.data.imageBNHA}
-            /*Music*/
-            imageGackt={this.props.data.imageGackt}
-            imageZedd={this.props.data.imageZedd}
-            imagePerfectCircle={this.props.data.imagePerfectCircle}
-            imageMetallica={this.props.data.imageMetallica}
-            /*Video*/
-            imageMovies={this.props.data.imageMovies}
-            imageSeries={this.props.data.imageSeries}
-            imageFanMade={this.props.data.imageFanMade}
-            imageMonty={this.props.data.imageMonty}
-            /*Books*/
-            imageRPO={this.props.data.imageRPO}
-            imageWoWBooks={this.props.data.imageWoWBooks}
-            imageDA={this.props.data.imageDA}
-            imageLRPG={this.props.data.imageLRPG}
-            imageKKC={this.props.data.imageKKC}
-            imageGoT={this.props.data.imageGoT}
-            imageCS={this.props.data.imageCS}
-            /*Misc*/
-            imageMemes={this.props.data.imageMemes}
-            imageHawt={this.props.data.imageHawt}
-            imageTechy={this.props.data.imageTechy}
-            imageAbout={this.props.data.imageAbout}
+            /*Dentures*/
+            imagedenture1={this.props.data.imagedenture1}
+            imagedenture2={this.props.data.imagedenture2}
+            imagedenture3={this.props.data.imagedenture3}
+            imagedenture4={this.props.data.imagedenture4}
+            /*Partials*/
+            imagePartial1={this.props.data.imagePartial1}
+            imagePartial2={this.props.data.imagePartial2}
+            imagePartial3={this.props.data.imagePartial3}
+            imagePartial4={this.props.data.imagePartial4}
+            imagePartial5={this.props.data.imagePartial5}
+            imagePartial6={this.props.data.imagePartial6}
+            /*CrownAndBridge*/
+            imageCrownAndBridge1={this.props.data.imageCrownAndBridge1}
+            imageCrownAndBridge2={this.props.data.imageCrownAndBridge2}
+            imageCrownAndBridge3={this.props.data.imageCrownAndBridge3}
+            imageCrownAndBridge4={this.props.data.imageCrownAndBridge4}
+            imageCrownAndBridge5={this.props.data.imageCrownAndBridge5}
+            /*Cast Metal Frames*/
+            imageCast1={this.props.data.imageCast1}
+            imageCast2={this.props.data.imageCast2}
+            imageCast3={this.props.data.imageCast3}
+            imageCast4={this.props.data.imageCast4}
+            /*Others*/
+            imageOther1={this.props.data.imageOther1}
+            imageOther2={this.props.data.imageOther2}
+            imageOther3={this.props.data.imageOther3}
+            imageOther4={this.props.data.imageOther4}
+            imageOther5={this.props.data.imageOther5}
+            imageOther6={this.props.data.imageOther6}
+            /*Digital*/
+            imageDigital1={this.props.data.imageDigital1}
+            imageDigital2={this.props.data.imageDigital2}
+            imageDigital3={this.props.data.imageDigital3}
+            imageDigital4={this.props.data.imageDigital4}
+            imageDigital5={this.props.data.imageDigital5}
+            imageDigital6={this.props.data.imageDigital6}
+            imageDigital7={this.props.data.imageDigital7}
+            imageDigital8={this.props.data.imageDigital8}
+            /*About*/
+            imageAbout1={this.props.data.imageAbout1}
+            imageAbout2={this.props.data.imageAbout2}
+            imageAbout3={this.props.data.imageAbout3}
+            imageAbout4={this.props.data.imageAbout4}
+            /*ML*/
+            imageML={this.props.data.imageML}
+            /*RX*/
+            imageRX={this.props.data.imageRX}
+            /*Fixed*/
+            imageFixed={this.props.data.imageFixed}
           />
           <Footer
             onOpenArticle={this.handleOpenArticle}
             timeout={this.state.timeout}
           />
-          {/* IF USING BACKGROUND IMAGE WITH GATSBY-IMAGE */}
-          {/*<Img style={{position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', zIndex: -1,}} sizes={this.props.data.background.sizes}/>*/}
+
+          {/*<Img
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: -1,
+            }}
+            sizes={this.props.data.background.sizes}
+          />*/}
         </div>
       )
-    }
-    // Anything that ISN'T the main component articles (like "pages") ---------------------------------------------------------------------------------------------------
-    else {
+    } else {
       content = (
-        <div id="wrapper" className="page pageOverlay">
+        <div id="wrapper" className="page">
           <div
             style={{
               maxWidth: '1140px',
             }}
           >
-            <Link to={`/`}>
-              <h1 className="major">{siteTitle}</h1>
-            </Link>
             {children()}
           </div>
         </div>
       )
     }
-    //What's returned in either case ------------------------------------------------------------------------------------------------------------------------------------
+
     return (
       <div
         className={`body ${this.state.loading} ${
           this.state.isArticleVisible ? 'is-article-visible' : ''
         }`}
       >
-        {/*Needed to reset site title when coming back to home screen*/}
         <Helmet>
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Helmet>
-
         {content}
         <div id="bg" />
       </div>
@@ -196,159 +210,216 @@ export const pageQuery = graphql`
         description
       }
     }
-    # Start Images --------------------------------------------------------------------------------------------------
-    # Background
     #background: imageSharp(id: { regex: "/bg.jpg/" }) {
     #  sizes(maxWidth: 1920) {
     #    ...GatsbyImageSharpSizes
     #  }
     #}
-    # Games
-    imageWoW: imageSharp(id: { regex: "/WoW.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    # Dentures
+    imagedenture1: imageSharp(id: { regex: "/denture1.png/" }) {
+      resolutions(width: 223, height: 150) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageBDO: imageSharp(id: { regex: "/BDO.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagedenture2: imageSharp(id: { regex: "/denture2.png/" }) {
+      resolutions(width: 228, height: 150) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imagePoE: imageSharp(id: { regex: "/PoE.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagedenture3: imageSharp(id: { regex: "/denture3.png/" }) {
+      resolutions(width: 223, height: 150) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageBless: imageSharp(id: { regex: "/Bless.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagedenture4: imageSharp(id: { regex: "/denture4.png/" }) {
+      resolutions(width: 270, height: 150) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # Anime
-    imageDBZ: imageSharp(id: { regex: "/DBZ.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    # Partials
+    imagePartial1: imageSharp(id: { regex: "/Partial1.png/" }) {
+      resolutions(width: 200, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageGundamWing: imageSharp(id: { regex: "/GundamWing.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagePartial2: imageSharp(id: { regex: "/Partial2.png/" }) {
+      resolutions(width: 200, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageBleach: imageSharp(id: { regex: "/Bleach.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagePartial3: imageSharp(id: { regex: "/Partial3.png/" }) {
+      resolutions(width: 200, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageBNHA: imageSharp(id: { regex: "/BNHA.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagePartial4: imageSharp(id: { regex: "/Partial4.png/" }) {
+      resolutions(width: 200, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # Music
-    imageGackt: imageSharp(id: { regex: "/Gackt.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagePartial5: imageSharp(id: { regex: "/Partial5.png/" }) {
+      resolutions(width: 200, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imagePerfectCircle: imageSharp(id: { regex: "/PerfectCircle.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imagePartial6: imageSharp(id: { regex: "/Partial6.png/" }) {
+      resolutions(width: 199, height: 170) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageZedd: imageSharp(id: { regex: "/Zedd.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    # Crown and Bridge
+    imageCrownAndBridge1: imageSharp(id: { regex: "/CrownAndBridge1.png/" }) {
+      resolutions(width: 115, height: 120) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageMetallica: imageSharp(id: { regex: "/Metallica.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCrownAndBridge2: imageSharp(id: { regex: "/CrownAndBridge2.png/" }) {
+      resolutions(width: 191, height: 120) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # Videos
-    imageMovies: imageSharp(id: { regex: "/Movies.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCrownAndBridge3: imageSharp(id: { regex: "/CrownAndBridge3.png/" }) {
+      resolutions(width: 150, height: 120) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageSeries: imageSharp(id: { regex: "/Series.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCrownAndBridge4: imageSharp(id: { regex: "/CrownAndBridge4.png/" }) {
+      resolutions(width: 167, height: 120) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageFanMade: imageSharp(id: { regex: "/FanMade.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCrownAndBridge5: imageSharp(id: { regex: "/CrownAndBridge5.jpg/" }) {
+      resolutions(width: 164, height: 120) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageMonty: imageSharp(id: { regex: "/Monty.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    # Cast
+    imageCast1: imageSharp(id: { regex: "/Cast1.png/" }) {
+      resolutions(width: 186, height: 180) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # Books
-    imageCS: imageSharp(id: { regex: "/CS.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCast2: imageSharp(id: { regex: "/Cast2.png/" }) {
+      resolutions(width: 225, height: 180) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageRPO: imageSharp(id: { regex: "/RPO.jpg/" }) {
-      resolutions(width: 130, height: 200) {
+    imageCast3: imageSharp(id: { regex: "/Cast3.png/" }) {
+      resolutions(width: 222, height: 180) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageWoWBooks: imageSharp(id: { regex: "/WoWBooks.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageCast4: imageSharp(id: { regex: "/Cast4.png/" }) {
+      resolutions(width: 216, height: 180) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageDA: imageSharp(id: { regex: "/DA.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    # Digital
+    imageDigital1: imageSharp(id: { regex: "/Digital1.png/" }) {
+      resolutions(width: 180, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageLRPG: imageSharp(id: { regex: "/LRPG.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital2: imageSharp(id: { regex: "/Digital2.png/" }) {
+      resolutions(width: 180, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageKKC: imageSharp(id: { regex: "/KKC.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital3: imageSharp(id: { regex: "/Digital3.png/" }) {
+      resolutions(width: 180, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageGoT: imageSharp(id: { regex: "/GoT.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital4: imageSharp(id: { regex: "/Digital4.png/" }) {
+      resolutions(width: 180, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageGrisha: imageSharp(id: { regex: "/Grisha.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital5: imageSharp(id: { regex: "/Digital5.png/" }) {
+      resolutions(width: 180, height: 101) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # Misc
-    imageMemes: imageSharp(id: { regex: "/Memes.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital6: imageSharp(id: { regex: "/Digital6.png/" }) {
+      resolutions(width: 180, height: 115) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageHawt: imageSharp(id: { regex: "/Hawt.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital7: imageSharp(id: { regex: "/Digital7.png/" }) {
+      resolutions(width: 180, height: 106) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageTechy: imageSharp(id: { regex: "/Techy.jpg/" }) {
-      resolutions(width: 300, height: 200) {
+    imageDigital8: imageSharp(id: { regex: "/Digital8.png/" }) {
+      resolutions(width: 180, height: 127) {
         ...GatsbyImageSharpResolutions
       }
     }
-    imageAbout: imageSharp(id: { regex: "/About.jpg/" }) {
-      resolutions(width: 180, height: 180) {
+    # About
+    imageAbout1: imageSharp(id: { regex: "/About1.jpg/" }) {
+      resolutions(width: 152, height: 200) {
         ...GatsbyImageSharpResolutions
       }
     }
-    # End Images --------------------------------------------------------------------------------------------------
+    imageAbout2: imageSharp(id: { regex: "/About2.jpg/" }) {
+      resolutions(width: 199, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageAbout3: imageSharp(id: { regex: "/About3.png/" }) {
+      resolutions(width: 183, height: 141) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageAbout4: imageSharp(id: { regex: "/About4.png/" }) {
+      resolutions(width: 178, height: 141) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    # Other
+    imageOther1: imageSharp(id: { regex: "/Other1.png/" }) {
+      resolutions(width: 180, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageOther2: imageSharp(id: { regex: "/Other2.png/" }) {
+      resolutions(width: 187, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageOther3: imageSharp(id: { regex: "/Other3.png/" }) {
+      resolutions(width: 179, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageOther4: imageSharp(id: { regex: "/Other4.png/" }) {
+      resolutions(width: 155, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    imageOther5: imageSharp(id: { regex: "/Other5.png/" }) {
+      resolutions(width: 199, height: 150) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    # ML
+    imageML: imageSharp(id: { regex: "/ML.jpg/" }) {
+      resolutions(width: 550, height: 336) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    # RX
+    imageRX: imageSharp(id: { regex: "/RX.jpg/" }) {
+      resolutions(width: 415, height: 650) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    # Fixed
+    imageFixed: imageSharp(id: { regex: "/Fixed.jpg/" }) {
+      resolutions(width: 985, height: 746) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    # End
   }
 `
