@@ -1,36 +1,46 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import Link from 'gatsby-link'
 
 const Footer = props => (
   <footer id="footer" style={props.timeout ? { display: 'none' } : {}}>
-    <p className="copyright">
-      <span className="item">&copy;&nbsp;Copyright Claudio Dental Lab</span>
-      &nbsp; &#11044; &nbsp;
-      <a
-        className="item"
-        href="javascript:;"
-        onClick={() => {
-          props.onOpenArticle('Privacy')
-        }}
-      >
-        &copy;&nbsp;Privacy&nbsp;Policy
-      </a>
-      &nbsp; &#11044; &nbsp;
-      <a
-        className="item"
-        href="javascript:;"
-        onClick={() => {
-          props.onOpenArticle('Terms')
-        }}
-      >
-        Terms&nbsp;of&nbsp;Use
-      </a>
-    </p>
+    <div className="copyright">
+      <p>
+        <span className="item">
+          &copy; Jojo's personal site, based on{' '}
+          <a href={`https://github.com/ChangoMan/gatsby-starter-dimension`}>
+            Gatsby Starter - Dimension.
+          </a>
+        </span>
+      </p>
+      <p>
+        <span className="item">
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('Privacy')
+            }}
+          >
+            &nbsp;Privacy&nbsp;Policy
+          </a>
+        </span>
+        &nbsp; &#11044; &nbsp;
+        <span className="item">
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('Terms')
+            }}
+          >
+            Terms&nbsp;of&nbsp;Use
+          </a>
+        </span>
+      </p>
+    </div>
   </footer>
 )
 
 Footer.propTypes = {
-  onOpenArticle: PropTypes.func,
   timeout: PropTypes.bool,
 }
 
