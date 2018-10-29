@@ -1,46 +1,47 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import get from 'lodash/get'
+import Img from 'gatsby-image'
+import styles from './Main.module.css'
 
-class IndexPage extends React.Component {
+class Privacy extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="articleHeader">Privacy Policy</h2>
-
+        <h3 className="major">Privacy Policy</h3>
         <p>
-          Implosion Inc. (hereinafter “Implosion”) maintains this site (the
-          “Site”) for your personal entertainment, information, education and
-          communication. Implosion takes your privacy seriously and is committed
-          to safeguarding your privacy online. Because we do gather certain
-          types of information from visitors to the Site, we have developed a
-          privacy statement to help you understand the terms and conditions
-          surrounding the collection and use of that information. This statement
-          discloses the types of information we gather, how it is used, and how
-          you can edit any data that we&#39;ve collected about you at any time.
+          Claudio Dental Lab Inc. (hereinafter “Claudio Dental Lab”) maintains
+          this site (the “Site”) for your personal entertainment, information,
+          education and communication. Claudio Dental Lab takes your privacy
+          seriously and is committed to safeguarding your privacy online.
+          Because we do gather certain types of information from visitors to the
+          Site, we have developed a privacy statement to help you understand the
+          terms and conditions surrounding the collection and use of that
+          information. This statement discloses the types of information we
+          gather, how it is used, and how you can edit any data that we&#39;ve
+          collected about you at any time.
         </p>
         <p>
           <strong>Guiding Principles: </strong>
-          Implosion respects the privacy of individuals who visit the Site, send
-          us email, or participate in features/services we offer online.
-          Accordingly, our policy regarding online privacy has been developed
-          using the following guiding principles: Implosion maintains a strict
-          “no-spam” policy. Subscribers to our email services or any other
-          feature/service found on the Site will not receive unsolicited email
-          messages from Implosion. Implosion collects information online
-          primarily to provide our visitors with a more relevant experience on
-          the Site. When doing so, we will make every reasonable effort to avoid
-          excessive or irrelevant collection of data. Implosion will take
-          reasonable physical, electronic and managerial measures to safeguard
-          and secure any information you provide to us (e.g. data will be stored
-          in protected databases on secured servers with restricted access).
-          Implosion will not share any information you have provided to us with
-          anyone without your consent other than to provide the service you have
-          requested. At the time you register for any such service, you will be
-          notified of, and asked to consent to, the sharing of your information
-          with any particular third party necessary to the provision of the
-          requested service.
+          Claudio Dental Lab respects the privacy of individuals who visit the
+          Site, send us email, or participate in features/services we offer
+          online. Accordingly, our policy regarding online privacy has been
+          developed using the following guiding principles: Claudio Dental Lab
+          maintains a strict “no-spam” policy. Subscribers to our email services
+          or any other feature/service found on the Site will not receive
+          unsolicited email messages from Claudio Dental Lab. Claudio Dental Lab
+          collects information online primarily to provide our visitors with a
+          more relevant experience on the Site. When doing so, we will make
+          every reasonable effort to avoid excessive or irrelevant collection of
+          data. Claudio Dental Lab will take reasonable physical, electronic and
+          managerial measures to safeguard and secure any information you
+          provide to us (e.g. data will be stored in protected databases on
+          secured servers with restricted access). Claudio Dental Lab will not
+          share any information you have provided to us with anyone without your
+          consent other than to provide the service you have requested. At the
+          time you register for any such service, you will be notified of, and
+          asked to consent to, the sharing of your information with any
+          particular third party necessary to the provision of the requested
+          service.
         </p>
         <p>
           <strong>Information Collected: </strong>
@@ -51,8 +52,8 @@ class IndexPage extends React.Component {
           address, (i.e. the unique number used to identify your computer) and
           any search engine you may have used to locate the Site. We use this
           information to help diagnose problems with our server, administer the
-          Site, and compile broad statistical data. In addition, Implosion
-          gathers certain navigational information about where you go on the
+          Site, and compile broad statistical data. In addition, Claudio Dental
+          Lab gathers certain navigational information about where you go on the
           Site. This information enables us to determine which areas of the Site
           are most frequently visited and helps us to tailor the Site to the
           needs and interests of our online visitors. In addition, this tracking
@@ -83,48 +84,48 @@ class IndexPage extends React.Component {
         </p>
         <p>
           <strong>How We Communicate with You: </strong>
-          Implosion may send authorized communications to you on the basis of
-          the information you provide to us through email or regular mail. We
-          will not contact you by telephone, fax, or other means unless you have
-          explicitly requested us to contact you in response to a specific
-          enquiry, or request, or to arrange an appointment. You may also
-          opt-out of email and regular mail communications from us at any time
-          (see the “Opt-Out Procedures” section below)
+          Claudio Dental Lab may send authorized communications to you on the
+          basis of the information you provide to us through email or regular
+          mail. We will not contact you by telephone, fax, or other means unless
+          you have explicitly requested us to contact you in response to a
+          specific enquiry, or request, or to arrange an appointment. You may
+          also opt-out of email and regular mail communications from us at any
+          time (see the “Opt-Out Procedures” section below)
         </p>
         <p>
           <strong>Disclosure of Personal Information: </strong>
-          Implosion understands the importance of your privacy. We collect and
-          maintain the personal information of our customers for the use of
-          Implosion and its subsidiaries. We do not sell, rent, or trade
-          customer information to third parties, other than as described below,
-          and never without your consent: Business Partners: Implosion may
-          partner with select distributors and other companies at various times
-          to provide expanded services to Site visitors. As part of such a
-          relationship, Implosion may share with these companies the use of
-          certain interactive website functions (e.g. email). Information
-          provided by Site visitors through the use of such interactive
-          functions may be available to both Implosion and its partners. Agents:
-          Implosion may use other companies and individuals to perform certain
-          functions on our behalf. Examples include administering email services
-          and running special promotions. Such parties only have access to the
-          personal information needed to perform these functions and may not use
-          or store the information for any other purpose. Subscribers or Site
-          visitors will never receive unsolicited email messages from agents
-          working on our behalf. Business Transfers: In the event that Implosion
-          sells or transfers a particular portion of its business assets,
-          consumer information may be one of the business assets transferred as
-          part of the transaction. If substantially all of the assets of
-          Implosion are acquired, information of the types listed in the
-          “Information Collected” section above may be transferred as part of
-          the acquisition. Compliance with Law/Safety: Implosion may disclose
-          specific personal information based on a good-faith belief that such
-          disclosure is necessary to comply with or conform to the law or that
-          such disclosure is necessary to protect the users of the Site, the
-          Sites itself, or the public. With Consent: Other than as set forth in
-          this Privacy Policy, you will be notified when any personally
-          identifiable information about you may be shared with third parties,
-          and you will be given the opportunity to decline to share that
-          information.
+          Claudio Dental Lab understands the importance of your privacy. We
+          collect and maintain the personal information of our customers for the
+          use of Claudio Dental Lab and its subsidiaries. We do not sell, rent,
+          or trade customer information to third parties, other than as
+          described below, and never without your consent: Business Partners:
+          Claudio Dental Lab may partner with select distributors and other
+          companies at various times to provide expanded services to Site
+          visitors. As part of such a relationship, Claudio Dental Lab may share
+          with these companies the use of certain interactive website functions
+          (e.g. email). Information provided by Site visitors through the use of
+          such interactive functions may be available to both Claudio Dental Lab
+          and its partners. Agents: Claudio Dental Lab may use other companies
+          and individuals to perform certain functions on our behalf. Examples
+          include administering email services and running special promotions.
+          Such parties only have access to the personal information needed to
+          perform these functions and may not use or store the information for
+          any other purpose. Subscribers or Site visitors will never receive
+          unsolicited email messages from agents working on our behalf. Business
+          Transfers: In the event that Claudio Dental Lab sells or transfers a
+          particular portion of its business assets, consumer information may be
+          one of the business assets transferred as part of the transaction. If
+          substantially all of the assets of Claudio Dental Lab are acquired,
+          information of the types listed in the “Information Collected” section
+          above may be transferred as part of the acquisition. Compliance with
+          Law/Safety: Claudio Dental Lab may disclose specific personal
+          information based on a good-faith belief that such disclosure is
+          necessary to comply with or conform to the law or that such disclosure
+          is necessary to protect the users of the Site, the Sites itself, or
+          the public. With Consent: Other than as set forth in this Privacy
+          Policy, you will be notified when any personally identifiable
+          information about you may be shared with third parties, and you will
+          be given the opportunity to decline to share that information.
         </p>
         <p>
           <strong>Policies on Children: </strong>
@@ -133,21 +134,22 @@ class IndexPage extends React.Component {
         </p>
         <p>
           <strong>Use of Cookies: </strong>
-          Implosion may use a browser feature known as a “cookie.” Cookies are
-          small files placed on your hard drive that assist Implosion in
-          providing you with a customized browsing experience. Implosion uses
-          cookies to provide you with the convenience of not having to re-enter
-          information, such as user IDs and passwords, multiple times during
-          your visits to the Site. Cookies can also be utilized to help
-          Implosion provide you with information targeted to your interests,
-          based upon your prior browsing on the Site. The “help” section of the
-          toolbar on most browsers will inform you on how to prevent your
-          browser from accepting new cookies, how to have the browser notify you
-          upon the receipt of a new cookie, or how to disable the use of cookies
-          completely. As the Site has been designed to take advantage of the use
-          of cookies, should you configure your browser to decline their use,
-          certain features of the Site may not function correctly and you may be
-          required to re-enter any user IDs and passwords more frequently.
+          Claudio Dental Lab may use a browser feature known as a “cookie.”
+          Cookies are small files placed on your hard drive that assist Claudio
+          Dental Lab in providing you with a customized browsing experience.
+          Claudio Dental Lab uses cookies to provide you with the convenience of
+          not having to re-enter information, such as user IDs and passwords,
+          multiple times during your visits to the Site. Cookies can also be
+          utilized to help Claudio Dental Lab provide you with information
+          targeted to your interests, based upon your prior browsing on the
+          Site. The “help” section of the toolbar on most browsers will inform
+          you on how to prevent your browser from accepting new cookies, how to
+          have the browser notify you upon the receipt of a new cookie, or how
+          to disable the use of cookies completely. As the Site has been
+          designed to take advantage of the use of cookies, should you configure
+          your browser to decline their use, certain features of the Site may
+          not function correctly and you may be required to re-enter any user
+          IDs and passwords more frequently.
         </p>
         <p>
           <strong>Accessing the Site from outside of the US: </strong>
@@ -159,11 +161,11 @@ class IndexPage extends React.Component {
         </p>
         <p>
           <strong>External Links: </strong>
-          The Site may contain links to other websites. Implosion is not
-          responsible for the privacy practices or the content of such websites.
-          To help ensure the protection of your privacy, Implosion recommends
-          that you review the privacy policy of any website you visit via a link
-          from the Site.
+          The Site may contain links to other websites. Claudio Dental Lab is
+          not responsible for the privacy practices or the content of such
+          websites. To help ensure the protection of your privacy, Claudio
+          Dental Lab recommends that you review the privacy policy of any
+          website you visit via a link from the Site.
         </p>
         <p>
           <strong>Passwords: </strong>
@@ -183,25 +185,27 @@ class IndexPage extends React.Component {
         </p>
         <p>
           <strong>Opt-Out Procedures: </strong>
-          You may always opt out of receiving future communications from
-          Implosion. Our Site allows users to opt-out of receiving such
+          You may always opt out of receiving future communications from Claudio
+          Dental Lab. Our Site allows users to opt-out of receiving such
           communications at the point where personal information is requested,
           or through other means as identified.
         </p>
         <p>
           <strong>Correcting, Updating and Removing Information: </strong>
-          Implosion supports the individual&#39;s right to protect their
-          privacy. Accordingly, you may update, modify or remove this
+          Claudio Dental Lab supports the individual&#39;s right to protect
+          their privacy. Accordingly, you may update, modify or remove this
           information at any time by doing any of the following:
         </p>
-          <ul>
-            <li>Sending your request by email to: atsuro4me@yahoo.com</li>
-            <li>
-              Visiting the following URL: http://www.Implosion.netlify.com/ and
-              using the information on the “Contact Us” page
-            </li>
-            <li>Calling us at: (xxx) xxx-xxxx</li>
-          </ul>
+        <ul>
+          <li>
+            Sending your request by email to: contact@claudiodentallab.com
+          </li>
+          <li>
+            Visiting the following URL: http://www.claudiodentallab.com/ and
+            using the information on the “Contact Us” page
+          </li>
+          <li>Calling us at (912) 537-3434</li>
+        </ul>
         <p>
           <strong>Changes to the Privacy Policy: </strong>
           We may at any time in our sole discretion revise or update this
@@ -210,17 +214,17 @@ class IndexPage extends React.Component {
           the Site thereafter. Your continued use of the Site following the
           posting of revised Privacy Policy means that you accept and agree to
           the changes. You are expected to check this page from time to time so
-          you are aware of any changes, as they are binding on you. Implosion
-          reserves the right to revoke your access to the Site.
+          you are aware of any changes, as they are binding on you. Claudio
+          Dental Lab reserves the right to revoke your access to the Site.
         </p>
         <p>
           <strong>Contacting the Site: </strong>
           If you have questions concerning this privacy policy or the practices
-          of the Site, you may contact Implosion at
-          cdllaboratory@windstream.net.
+          of the Site, you may contact Claudio Dental Lab at
+          contact@claudiodentallab.com.
         </p>
       </div>
     )
   }
 }
-export default IndexPage
+export default Privacy

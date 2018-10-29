@@ -1,0 +1,52 @@
+.clear {
+  clear: both;
+  padding-top: 2rem;
+}
+.rightImg {
+  float: right;
+  margin-left: 1rem;
+}
+.leftImg {
+  float: left;
+  margin-right: 1rem;
+}
+.paddingTop {
+  padding-top: 2rem;
+}
+.paddingBottom {
+  padding-bottom: 4rem;
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexItems {
+  width: 260px;
+  padding: 1rem;
+  min-height: 200px;
+}
+form label {
+  color: #1f497d !important;
+  font-weight: bold;
+  border-color: #1f497d !important;
+}
+form input,
+textarea {
+  color: #1f497d !important;
+  border-color: #1f497d !important;
+  font-size: 1.5rem;
+}
+@media print {
+  h3,
+  p {
+    display: none !important;
+  }
+}
+h4 {
+  font-weight: bold;
+  color: #1f497d !important;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
