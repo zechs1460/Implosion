@@ -1,43 +1,67 @@
 // Misc.
-	$misc: (
-		z-index-base:				10000
-	);
+$misc: (z-index-base: 10000);
 
 // Duration.
-	$duration: (
-		transition:					0.2s,
-		bg:							2.5s,
-		intro:						0.75s,
-		article:					0.325s
-	);
-
+$duration: (
+  transition: 0.2s,
+  bg: 2.5s,
+  intro: 0.75s,
+  article: 0.325s
+);
 // Size.
-	$size: (
-		border-radius:				4px,
-		border-width:				1px,
-		element-height:				2.75rem,
-		element-margin:				2rem
-	);
-
-// Font.
-	$font: (
-		family:						('Roboto', sans-serif),
-		family-fixed:				('Courier New', monospace),
-		weight:						300,
-		weight-bold:				600,
-		letter-spacing:				0.2rem,
-		letter-spacing-heading:		0.5rem
-	);
-
+$size: (
+  border-radius: 4px,
+  border-width: 1px,
+  element-height: 2.75rem,
+  element-margin: 2rem
+);
+// Font Headers.
+$fontHeader: (
+  size: 1.1rem,
+  family: ('Magneto'),
+  color: black,
+  weight: 600,
+  spacing: 0.5rem,
+  transform: capitalize,
+  shadow: (-1px 0 #30b6ff, 0 1px #30b6ff, 1px 0 #30b6ff, 0 -1px #30b6ff)
+    /* How to Use:*/
+    /*
+		font-size: _fontHeader(size);
+		font-family: _fontHeader(family);
+    color: _fontHeader(color);
+    font-weight: _fontHeader(weight);
+    letter-spacing: _fontHeader(spacing);
+    text-shadow: _fontHeader(shadow);
+  	text-transform: _fontHeader(transform);
+  */
+);
+// Font Bodies.
+$fontBody: (
+  size: 1.1rem,
+  family: ('Trebuchet MS'),
+  color: white,
+  weight: 300,
+  spacing: 0.2rem,
+  shadow: (-1px 0 #011c2d, 0 1px #011c2d, 1px 0 #011c2d, 0 -1px #011c2d)
+    /* How to Use:*/
+    /*
+		font-size: _fontBody(size);
+		font-family: _fontBody(family);
+    color: _fontBody(color);
+    font-weight: _fontBody(weight);
+    letter-spacing: _fontBody(spacing);
+    text-shadow: _fontBody(shadow);
+  */
+);
 // Palette.
-	$palette: (
-		bg:							#1b1f22,
-		bg-alt:						#000000,
-		bg-overlay:					rgba(19,21,25,0.5),
-		fg:							#ffffff,
-		fg-bold:					#ffffff,
-		fg-light:					rgba(255,255,255,0.5),
-		border:						#ffffff,
-		border-bg:					rgba(255,255,255,0.075),
-		border-bg-alt:				rgba(255,255,255,0.175)
-	);
+$palette: (
+  bg: #1b1f22,
+  bg-alt: #000000,
+  bg-overlay: rgba(19, 21, 25, 0.5),
+  fg: #ffffff,
+  fg-bold: #ffffff,
+  fg-light: rgba(255, 255, 255, 0.5),
+  border: #ffffff,
+  border-bg: rgba(255, 255, 255, 0.075),
+  border-bg-alt: rgba(255, 255, 255, 0.175)
+);

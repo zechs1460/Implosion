@@ -7,197 +7,248 @@
 /* Type */
 
 html {
-	font-size: 16pt;
+  font-size: 16pt;
 
-	@include breakpoint(xlarge) {
-		font-size: 12pt;
-	}
+  @include breakpoint(xlarge) {
+    font-size: 12pt;
+  }
 
-	@include breakpoint(small) {
-		font-size: 11pt;
-	}
+  @include breakpoint(small) {
+    font-size: 11pt;
+  }
 
-	@include breakpoint(xxsmall) {
-		font-size: 10pt;
-	}
+  @include breakpoint(xxsmall) {
+    font-size: 10pt;
+  }
 }
 
-body, input, select, textarea {
-	color: _palette(fg);
-	font-family: _font(family);
-	font-weight: _font(weight);
-	font-size: 1rem;
-	line-height: 1.65;
+body,
+input,
+select,
+textarea {
+  color: _palette(fg);
+  font-family: _fontBody(family);
+  font-weight: _fontBody(weight);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 a {
-	@include vendor('transition', (
-	'color #{_duration(transition)} ease-in-out',
-	'background-color #{_duration(transition)} ease-in-out',
-	'border-bottom-color #{_duration(transition)} ease-in-out'
-	));
-	border-bottom: dotted 1px _palette(fg-light);
-	text-decoration: none;
-	color: inherit;
+  @include vendor(
+    'transition',
+    (
+      'color #{_duration(transition)} ease-in-out',
+      'background-color #{_duration(transition)} ease-in-out',
+      'border-bottom-color #{_duration(transition)} ease-in-out'
+    )
+  );
+  border-bottom: dotted 1px _palette(fg-light);
+  text-decoration: none;
+  color: inherit;
 
-	&:hover {
-		border-bottom-color: transparent;
-	}
+  &:hover {
+    border-bottom-color: transparent;
+  }
 }
 
-strong, b {
-	color: _palette(fg-bold);
-	font-weight: _font(weight-bold);
+strong,
+b {
+  color: _palette(fg-bold);
+  font-weight: _fontBody(weight);
 }
 
-em, i {
-	font-style: italic;
+em,
+i {
+  font-style: italic;
 }
 
-p, ul {
-	margin: 0 0 _size(element-margin) 0;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.1rem;
-	color: #1f497d;
+p,
+ul {
+  margin: 0 0 _size(element-margin) 0;
+  font-size: 1.1rem;
+  font-family: 'Trebuchet MS';
+  color: white;
+  text-shadow: -1px 0 #011c2d, 0 1px #011c2d, 1px 0 #011c2d, 0 -1px #011c2d;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: _palette(fg-bold);
-	font-weight: _font(weight-bold);
-	line-height: 1.5;
-	margin: 0 0 (_size(element-margin) * 0.5) 0;
-	text-transform: uppercase;
-	letter-spacing: _font(letter-spacing);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: _palette(fg-bold);
+  font-weight: _fontBody(weight);
+  line-height: 1.5;
+  margin: 0 0 (_size(element-margin) * 0.5) 0;
+  text-transform: uppercase;
+  letter-spacing: _fontBody(spacing);
+  text-shadow: _fontBody(shadow);
 
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-	&.major {
-		border-bottom: solid _size(border-width) _palette(border);
-		width: -moz-max-content;
-		width: -webkit-max-content;
-		width: -ms-max-content;
-		width: max-content;
-		padding-bottom: 0.5rem;
-		margin: 0 0 (_size(element-margin) * 1) 0;
-		color: #1f497d; /*Navy Blue*/
-	}
-	&.major:hover {
-		color: #00ccfe; /*Light Blue*/
-		text-decoration:underline;
-	}
+  &.articleHeader {
+    border-bottom: solid _size(border-width) _palette(border);
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -ms-max-content;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 0 (_size(element-margin) * 1) 0;
+    color: _fontHeader(color);
+    text-shadow: _fontHeader(shadow);
+  }
+  &.major {
+    border-bottom: solid _size(border-width) _palette(border);
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -ms-max-content;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 0 (_size(element-margin) * 1) 0;
+    color: _fontHeader(color);
+    font-family: _fontHeader(family);
+    font-weight: _fontHeader(weight);
+    letter-spacing: _fontHeader(spacing);
+    text-shadow: _fontHeader(shadow);
+    font-size: 3.5rem;
+    text-transform: capitalize;
+  }
+  &.major:hover {
+    color: #00ccfe; /*Light Blue*/
+    text-decoration: underline;
+  }
 }
 // Page css
 h1 {
-	padding-top: 20px;
-	font-size: 2.75rem;
-	line-height: 1.3;
-	letter-spacing: _font(letter-spacing-heading);
+  padding-top: 20px;
+  font-size: 2.75rem;
+  line-height: 1.3;
+  letter-spacing: _fontHeader(spacing);
 }
 .logo {
-	font-family: Magneto;
-	font-weight: bold;
-	font-size: 52px;
-	color: #1f497d;
+  font-family: Magneto;
+  font-weight: bold;
+  font-size: 52px;
+  color: black;
 }
 h2 {
-	font-size: 1.5rem;
-	line-height: 1.4;
-	letter-spacing: _font(letter-spacing-heading);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: _fontHeader(spacing);
 }
 
 h3 {
-	font-size: 1.5rem;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #1f497d;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
 }
 
 h4 {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 h5 {
-	font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 h6 {
-	font-size: 4rem;
-	font-family: Magneto;
-	font-weight: bold;
-	text-transform: capitalize;
-	color: #1f497d;
+  font-size: 4rem;
+  font-family: Magneto;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: black;
+  text-shadow: -1px 0 #30b6ff, 0 1px #30b6ff, 1px 0 #30b6ff, 0 -1px #30b6ff;
 }
 
 @include breakpoint(small) {
-	h1 {
-		font-size: 1.75rem;
-		line-height: 1.4;
-	}
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
 
-	h2 {
-		font-size: 1.25em;
-		line-height: 1.5;
-	}
+  h2 {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
 }
 
 sub {
-	font-size: 0.8rem;
-	position: relative;
-	top: 0.5rem;
+  font-size: 0.8rem;
+  position: relative;
+  top: 0.5rem;
 }
 
 sup {
-	font-size: 0.8rem;
-	position: relative;
-	top: -0.5rem;
+  font-size: 0.8rem;
+  position: relative;
+  top: -0.5rem;
 }
 
 blockquote {
-	border-left: solid (_size(border-width) * 4) _palette(border);
-	font-style: italic;
-	margin: 0 0 _size(element-margin) 0;
-	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+  border-left: solid (_size(border-width) * 4) _palette(border);
+  font-style: italic;
+  margin: 0 0 _size(element-margin) 0;
+  padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4)
+    _size(element-margin);
 }
 
 code {
-	background: _palette(border-bg);
-	border-radius: _size(border-radius);
-	font-family: _font(family-fixed);
-	font-size: 0.9rem;
-	margin: 0 0.25rem;
-	padding: 0.25rem 0.65rem;
+  background: _palette(border-bg);
+  border-radius: _size(border-radius);
+  font-family: _fontBody(family);
+  font-size: 0.9rem;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.65rem;
 }
 
 pre {
-	-webkit-overflow-scrolling: touch;
-	font-family: _font(family-fixed);
-	font-size: 0.9rem;
-	margin: 0 0 _size(element-margin) 0;
+  -webkit-overflow-scrolling: touch;
+  font-family: _fontBody(family);
+  font-size: 0.9rem;
+  margin: 0 0 _size(element-margin) 0;
 
-	code {
-		display: block;
-		line-height: 1.75;
-		padding: 1rem 1.5rem;
-		overflow-x: auto;
-	}
+  code {
+    display: block;
+    line-height: 1.75;
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+  }
 }
 
 hr {
-	border: 0;
-	border-bottom: solid _size(border-width) _palette(border);
-	margin: (_size(element-margin) * 1.375) 0;
+  border: 0;
+  border-bottom: solid _size(border-width) _palette(border);
+  margin: (_size(element-margin) * 1.375) 0;
 }
 
 .align-left {
-	text-align: left;
+  text-align: left;
 }
 
 .align-center {
-	text-align: center;
+  text-align: center;
 }
 
 .align-right {
-	text-align: right;
+  text-align: right;
 }
+
+.pageOverlay {
+  background-color: rgba(45, 61, 73, 0.8); /*opaque blue bg */
+  border-radius: _size(border-radius);
+}
+/*
+.pageOverlayBAK {
+  background-color: rgba(45, 61, 73, 0.8); //opaque blue bg
+  border-radius: _size(border-radius);
+  padding-top: 8%;
+  padding-bottom: 15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 130%;
+}
+*/

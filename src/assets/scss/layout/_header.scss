@@ -103,12 +103,25 @@
         margin-bottom: 0;
       }
     }
-
+    // Subtitle under site title
     p {
+      ///*
+      font-size: _fontBody(size);
+      font-family: _fontBody(family);
+      color: _fontBody(color);
+      font-weight: _fontBody(weight);
+      letter-spacing: _fontBody(spacing);
+      text-shadow: _fontBody(shadow);
       text-transform: uppercase;
-      letter-spacing: _font(letter-spacing);
-      font-size: 0.8rem;
       line-height: 2;
+      //*/
+      /*
+      text-transform: uppercase;
+      letter-spacing: _fontBody(spacing);
+      font-weight: bold;
+      color: white;
+      //text-shadow: -0.5px 0 #30b6ff, 0 0.5px #30b6ff, 0.5px 0 #30b6ff, 0 -0.5px #30b6ff;
+      */
     }
   }
 
@@ -130,22 +143,27 @@
         }
 
         a {
-          background-color: rgba(255, 255, 255, 0.75); /*opaque white bg */
-          display: table;
+          background-color: rgba(76, 174, 240, 0.719); /*opaque blue bg */
+          //background-color: rgba(255,255,255,0.3);	/*opaque white bg */
+          display: block;
           min-width: 7.5rem;
           height: 2.75rem;
           line-height: 2.75rem;
-          padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+          padding: 0 1.25rem 0 (1.25rem + _fontBody(spacing));
           text-transform: uppercase;
-          letter-spacing: _font(letter-spacing);
+          font-size: 0.8rem;
           border-bottom: 0;
-          color: #1f497d; /*Navy Blue*/
           font-size: 1.1rem;
           font-weight: 540;
 
+          font-family: _fontBody(family);
+          color: _fontHeader(color);
+          letter-spacing: _fontHeader(spacing);
+          text-shadow: _fontHeader(shadow);
+
           &:hover {
             background-color: _palette(border-bg);
-            color: #00ccfe; /*Light Blue*/
+            text-shadow: _fontHeader(shadow);
           }
 
           &:active {
@@ -199,116 +217,51 @@
       }
     }
   }
-  /// **************************************************
-  /// This is around 950 px
-  @include breakpoint(medium) {
-    padding: 1.5rem 0;
-    @include vendor(
-      'align-items',
-      'unset'
-    ); // the original center makes it all inline, this will allow the items to go to a new row
 
+  @include breakpoint(medium) {
     .content {
-      .inner {
-        padding: 2.5rem 0;
-      }
       p {
         br {
           display: none;
         }
       }
     }
+  }
 
-    nav {
-      ul {
-        //@include vendor('flex-direction', 'column');
-        min-width: 10rem;
-        max-width: 100%;
-        //background-color: rgb(193, 196, 35);    //Testing Only
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        //height: 110px;
-        height: 6.25rem; // The size of the ROW, therefore the higher, the more rows there are
+  @include breakpoint(small) {
+    > * {
+      margin-top: 2rem;
 
-        li {
-          border-left: 0;
-          border-top: solid _size(border-width) _palette(border);
-          border: 0.1px white solid;
-          flex: 1;
-
-          &:first-child {
-            border-top: 0;
-          }
-
-          a {
-            height: 3rem;
-            line-height: 3rem;
-            min-width: 0;
-            width: 100%;
-          }
-        }
+      &:before {
+        top: calc(-2rem - 1px);
+        height: calc(2rem + 1px);
       }
+    }
 
-      &.use-middle {
-        &:after {
-          display: none;
+    .logo {
+      width: 4.75rem;
+      height: 4.75rem;
+      line-height: 4.75rem;
+
+      .icon {
+        &:before {
+          font-size: 1.75rem;
         }
       }
     }
-  }
-  /// **************************************************
-  /// This is around 750 px
-  @include breakpoint(small) {
-    padding: 1.5rem 0;
 
     .content {
       .inner {
-        padding: 2.5rem 0;
-      }
-    }
-
-    nav {
-      ul {
-        //@include vendor('flex-direction', 'column');  // the original center makes it all inline, this will allow the items to go to a new row
-        min-width: 10rem;
-        max-width: 100%;
-        //background-color: rgb(196, 35, 142);  //Testing Only
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        //height: 140px;
-        height: 9.35rem; // The size of the ROW, therefore the higher, the more rows there are
-
-        li {
-          border-left: 0;
-          border-top: solid _size(border-width) _palette(border);
-          border: 0.1px white solid;
-
-          &:first-child {
-            border-top: 0;
-          }
-
-          a {
-            height: 3rem;
-            line-height: 3rem;
-            min-width: 0;
-            width: 100%;
-          }
-        }
+        padding: 2.5rem 1rem;
       }
 
-      &.use-middle {
-        &:after {
-          display: none;
-        }
+      p {
+        line-height: 1.875;
       }
     }
   }
-  /// **************************************************
-  /// This is around 600 px
+
   @include breakpoint(xsmall) {
-    @include vendor('align-items', 'center');
     padding: 1.5rem 0;
 
     .content {
@@ -322,7 +275,6 @@
         @include vendor('flex-direction', 'column');
         min-width: 10rem;
         max-width: 100%;
-        height: 100%;
 
         li {
           border-left: 0;

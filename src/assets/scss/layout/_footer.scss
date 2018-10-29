@@ -7,37 +7,46 @@
 /* Footer */
 
 #footer {
-	@include vendor('transition', (
-	'transform #{_duration(article)} ease-in-out',
-	'filter #{_duration(article)} ease-in-out',
-	'opacity #{_duration(article)} ease-in-out',
-	));
-	width: 100%;
-	max-width: 100%;
-	margin-top: 2rem;
-	text-align: center;
+  @include vendor(
+    'transition',
+    (
+      'transform #{_duration(article)} ease-in-out',
+      'filter #{_duration(article)} ease-in-out',
+      'opacity #{_duration(article)} ease-in-out'
+    )
+  );
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+  text-align: center;
 
-	.copyright {
-		letter-spacing: _font(letter-spacing);
-		font-size: 0.65rem;
-		opacity: 0.75;
-		margin-bottom: 0;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	.item {
-		background-color: rgba(255,255,255,0.5);	/*opaque white bg */
-		padding: .25rem;
-		border-radius: .5rem;
-	}
+  .copyright {
+    letter-spacing: _fontBody(spacing);
+    font-size: 0.5rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .item {
+    //background-color: rgba(255,255,255,0.2);	/*opaque white bg */
+    background-color: rgba(76, 174, 240, 0.719); /*opaque white bg */
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .item a {
+    color: white;
+    text-shadow: -1px 0 #30b6ff, 0 1px #30b6ff, 1px 0 #30b6ff, 0 -1px #30b6ff;
+  }
 
-	.body.is-article-visible & {
-		@include vendor('transform', 'scale(0.95)');
-		@include vendor('filter', 'blur(0.1rem)');
-		opacity: 0;
-	}
+  .body.is-article-visible & {
+    @include vendor('transform', 'scale(0.95)');
+    @include vendor('filter', 'blur(0.1rem)');
+    opacity: 0;
+  }
 
-	.body.is-loading & {
-		opacity: 0;
-	}
+  .body.is-loading & {
+    opacity: 0;
+  }
 }
