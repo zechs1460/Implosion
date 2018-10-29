@@ -3,74 +3,10 @@ import React from 'react'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('Dentures')
-            }}
-          >
-            Dentures
-          </a>
-        </li>
-        <div className="divide1" />
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('Partials')
-            }}
-          >
-            FRS&nbsp;Partials
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('CrownAndBridge')
-            }}
-          >
-            Crown
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('CrownAndBridge')
-            }}
-          >
-            Bridge
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('Cast')
-            }}
-          >
-            Cast&nbsp;Metal
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('Other')
-            }}
-          >
-            Other&nbsp;Products
-          </a>
-        </li>
-      </ul>
-    </nav>
     <div className="content">
       <div className="inner">
-        <h6>Claudio Dental Lab</h6>
+        <h6>Implosion</h6>
+        <p>A site about all the things I love!</p>
       </div>
     </div>
     <nav>
@@ -79,60 +15,60 @@ const Header = props => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('Digital')
+              props.onOpenArticle('Games')
             }}
           >
-            Digital
+            Games
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('About')
+              props.onOpenArticle('Anime')
             }}
           >
-            About
+            Anime
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('Contact')
+              props.onOpenArticle('Music')
             }}
           >
-            Contact
+            Music
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('ML')
+              props.onOpenArticle('Video')
             }}
           >
-            Mailing&nbsp;Label
+            Video
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('RX')
+              props.onOpenArticle('Books')
             }}
           >
-            RX&nbsp;Form
+            Books
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('Fixed')
+              props.onOpenArticle('Misc')
             }}
           >
-            Fixed&nbsp;Form
+            Misc
           </a>
         </li>
       </ul>
